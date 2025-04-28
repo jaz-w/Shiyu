@@ -1,1 +1,1 @@
-export { default } from '@shiyu/prettier-config';
+export { default } from '@shiyu/prettier-config'

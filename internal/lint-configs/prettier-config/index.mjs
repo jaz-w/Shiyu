@@ -6,9 +6,7 @@ export default {
   jsxSingleQuote: true,
   overrides: [
     {
-      files: [
-        '*.json5',
-      ],
+      files: ['*.json5'],
       options: {
         quoteProps: 'preserve',
         singleQuote: false,
@@ -18,8 +16,8 @@ export default {
   printWidth: 100,
   quoteProps: 'as-needed',
   semi: false,
-  singleQuote: false,
+  singleQuote: true,
   tabWidth: 2,
-  trailingComma: 'all',
+  trailingComma: 'es5',
   useTabs: false,
 }
