@@ -1,0 +1,13 @@
+{
+  "name": "shiyu-monorepo",
+  "version": "0.0.0",
+  "description": "时屿",
+  "author": {
+    "name": "JazWang",
+    "url": "https://github.com/jaz-w"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@shiyu/prettier-config": "workspace:*"
+  }
+}

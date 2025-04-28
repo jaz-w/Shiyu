@@ -1,0 +1,8 @@
+packages:
+  - internal/*
+  - internal/lint-configs/*
+  - packages/*
+  - apps/*
+catalog:
+  prettier: ^3.5.3
+  prettier-plugin-tailwindcss: ^0.6.11
