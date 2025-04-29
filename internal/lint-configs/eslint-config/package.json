@@ -1,0 +1,14 @@
+{
+  "name": "@shiyu/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/jaz-w/Shiyu",
+  "bugs": "https://github.com/jaz-w/Shiyu/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaz-w/Shiyu.git",
+    "directory": "internal/lint-configs/eslint-config"
+  },
+  "license": "MIT",
+  "type": "module"
+}

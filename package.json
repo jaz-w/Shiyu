@@ -1,13 +1,45 @@
 {
   "name": "shiyu-monorepo",
-  "version": "0.0.0",
   "description": "时屿",
+  "version": "0.0.0",
+  "license": "MIT",
   "author": {
     "name": "JazWang",
     "url": "https://github.com/jaz-w"
   },
-  "license": "MIT",
+  "bugs": "https://github.com/jaz-w/Shiyu/issues",
+  "repository": "https://github.com/jaz-w/Shiyu.git",
+  "engines": {
+    "node": ">=20.10.0",
+    "pnpm": ">=9.15.0"
+  },
+  "scripts": {
+    "catalog": "pnpx codemod pnpm/catalog"
+  },
   "devDependencies": {
-    "@shiyu/prettier-config": "workspace:*"
+    "@shiyu/commitlint-config": "workspace:*",
+    "@shiyu/eslint-config": "workspace:*",
+    "@shiyu/node-utils": "workspace:*",
+    "@shiyu/prettier-config": "workspace:*",
+    "@shiyu/stylelint-config": "workspace:*",
+    "@shiyu/unocss-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "@vue/test-utils": "catalog:",
+    "autoprefixer": "catalog:",
+    "cross-env": "catalog:",
+    "happy-dom": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "rimraf": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "unbuild": "catalog:",
+    "unocss": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
   }
 }
