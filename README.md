@@ -1,7 +1,11 @@
 # Shiyu
+
 时屿
 
-## 应用备忘录
+## 备忘录
+
+### 应用
+
 | 名称          | 简要说明                                                                          |
 | ------------- | --------------------------------------------------------------------------------- |
 | 《时屿·页澜》 | 书库: 可阅读现代书籍与古籍，翻页效果，自定义纸张纹理与翻页动画。                  |
@@ -13,7 +17,8 @@
 | 《时屿·枢途》 | 个性化导航页，聚合常用工具链接，支持按场景分类与快捷搜索。                        |
 | 《时屿·储屿》 | 网盘：提供文件存储与共享功能，支持多设备同步与权限管理。                          |
 
-## 大致目录分层备忘录
+### 目录
+
 ```
 时屿/
 ├── .husky/                  # Git钩子
@@ -46,19 +51,24 @@
 │   │   └── shared/          # 主题基础变量/工具
 │   ├── hooks/               # 通用 React Hooks
 │   ├── utils/               # 纯工具函数库
-│   ├── plugins/             # 构建插件集合
-│   │   ├── vite/            # Vite 插件
-│   │   ├── webpack/         # Webpack 插件
-│   │   └── babel/           # Babel 插件
-│   └── configs/             # 共享配置
-│       ├── eslint/          # ESLint 配置
-│       ├── tsconfig/        # TypeScript 配置
-│       └── jest/            # Jest 测试配置
 ├── internal/                # 内部的
-│   ├── scripts/             # 部署/构建脚本
-│   ├── tools/               # 开发工具
+│   ├── lint-configs/             # 部署/构建脚本
+│   │   ├── commitlint-config/    # commitlint-config 配置
+│   │   ├── eslint-config/        # ESLint 配置
+│   │   ├── prettier-config/      # Prettier 配置
+│   │   └── stylelint-config/     # Stylelint 配置
+│   ├── node-utils/               # Node 工具库
+│   ├── tsconfig/                 # TypeScript 配置
+│   ├── unocss-config/            # Unocss 配置
+│   ├── vite-config/              # Vite 配置
 ├── package.json             # 根依赖
 ├── turbo.json               # 构建管道
 ├── pnpm-workspace.yaml      # 工作区定义
 └── README.md                # 项目总纲文档
 ```
+
+### 借鉴
+
+| 借鉴类型     | 名称                                                   | 简要说明                                                                                                                         |
+| ------------ | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| 项目初始架构 | [Vben Admin](https://github.com/vbenjs/vue-vben-admin) | Vue-Vben-Admin 是一个基于 Vue3.0、Vite、 Ant-Design-Vue、TypeScript 的后台解决方案，目标是为开发中大型项目提供开箱即用的解决方案 |
