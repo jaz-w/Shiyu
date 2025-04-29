@@ -22,6 +22,7 @@
     "@shiyu/node-utils": "workspace:*",
     "@shiyu/prettier-config": "workspace:*",
     "@shiyu/stylelint-config": "workspace:*",
+    "@shiyu/tsconfig": "workspace:*",
     "@shiyu/unocss-config": "workspace:*",
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",

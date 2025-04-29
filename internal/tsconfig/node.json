@@ -1,0 +1,10 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "composite": false,
+    "lib": ["ESNext"],
+    "baseUrl": "./",
+    "types": ["node"],
+    "noImplicitAny": true
+  }
+}

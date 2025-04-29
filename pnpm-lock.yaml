@@ -86,6 +86,9 @@ importers:
       '@shiyu/stylelint-config':
         specifier: workspace:*
         version: link:internal/lint-configs/stylelint-config
+      '@shiyu/tsconfig':
+        specifier: workspace:*
+        version: link:internal/tsconfig
       '@shiyu/unocss-config':
         specifier: workspace:*
         version: link:internal/unocss-config
@@ -160,6 +163,12 @@ importers:
   internal/lint-configs/stylelint-config: {}
 
   internal/node-utils: {}
+
+  internal/tsconfig:
+    dependencies:
+      vite:
+        specifier: 'catalog:'
+        version: 6.3.3(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1)
 
   internal/unocss-config: {}
 

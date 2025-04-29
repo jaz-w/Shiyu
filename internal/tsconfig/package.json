@@ -1,0 +1,23 @@
+{
+  "name": "@shiyu/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/jaz-w/Shiyu",
+  "bugs": "https://github.com/jaz-w/Shiyu/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaz-w/Shiyu.git",
+    "directory": "internal/tsconfig"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "base.json",
+    "library.json",
+    "node.json",
+    "web.json"
+  ],
+  "dependencies": {
+    "vite": "catalog:"
+  }
+}
