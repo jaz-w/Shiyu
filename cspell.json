@@ -60,7 +60,15 @@
     "vitepress",
     "vitest",
     "vnode",
-    "vueuse"
+    "vueuse",
+    "Yelan",
+    "Yaocang",
+    "Lvying",
+    "Moxu",
+    "Shengshu",
+    "Chenxu",
+    "Shutu",
+    "Chuyu"
   ],
   "ignorePaths": [
     "**/node_modules/**",

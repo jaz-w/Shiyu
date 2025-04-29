@@ -24,6 +24,7 @@
     "@shiyu/stylelint-config": "workspace:*",
     "@shiyu/tsconfig": "workspace:*",
     "@shiyu/unocss-config": "workspace:*",
+    "@shiyu/vite-config": "workspace:*",
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
