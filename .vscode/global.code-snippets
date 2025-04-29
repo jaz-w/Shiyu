@@ -1,0 +1,63 @@
+{
+  "import": {
+    "scope": "javascript,typescript",
+    "prefix": "im",
+    "body": ["import { $2 } from '$1';"],
+    "description": "Import a module",
+  },
+  "export-all": {
+    "scope": "javascript,typescript",
+    "prefix": "ex",
+    "body": ["export * from '$1';"],
+    "description": "Export a module",
+  },
+  "vue-script-setup": {
+    "scope": "vue",
+    "prefix": ["<sc", "vsetup", "v3"],
+    "body": [
+      "<script setup lang=\"ts\">",
+      "const props = defineProps<{",
+      "  modelValue?: boolean,",
+      "}>()",
+      "$1",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>",
+      "    <slot/>",
+      "  </div>",
+      "</template>",
+    ],
+    "description": "Vue script setup 脚本",
+  },
+  "vue-sass-scoped-style": {
+    "scope": "vue",
+    "prefix": ["<scss", "scss"],
+    "body": ["<style lang=\"scss\" scoped>", "$1", "</style>"],
+    "description": "Vue scss 作用域样式",
+  },
+  "vue-sass-global-style": {
+    "scope": "vue",
+    "prefix": ["<style", "style"],
+    "body": ["<style lang=\"scss\">", "$1", "</style>"],
+    "description": "Vue scss 全局样式",
+  },
+  "vue-deep-selector": {
+    "scope": "scss",
+    "prefix": "deep",
+    "body": [":deep($1) {", "$2", "}"],
+    "description": "Vue 样式深度选择器",
+  },
+  "vue-computed": {
+    "scope": "typescript,vue",
+    "prefix": "com",
+    "body": ["computed(() => $1)"],
+    "description": "Vue computed 计算属性",
+  },
+  "unocss-@apply": {
+    "scope": "scss,css",
+    "prefix": ["@apply", "apply"],
+    "body": ["@apply $1;"],
+    "description": "Unocss @apply 指令",
+  },
+}

@@ -10,6 +10,7 @@ catalog:
   "@vue/test-utils": ^2.4.6
   autoprefixer: ^10.4.21
   cross-env: ^7.0.3
+  cspell: ^8.19.3
   happy-dom: ^17.4.4
   husky: ^9.1.7
   lint-staged: ^15.5.1
