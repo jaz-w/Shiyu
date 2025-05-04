@@ -10,5 +10,24 @@
     "directory": "internal/lint-configs/commitlint-config"
   },
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@shiyu/node-utils": "workspace:*",
+    "commitlint-plugin-function-rules": "catalog:",
+    "cz-git": "catalog:",
+    "czg": "catalog:"
+  }
 }

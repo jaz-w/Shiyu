@@ -15,9 +15,13 @@
   },
   "scripts": {
     "postinstall": "pnpm -r run stub --if-present",
-    "catalog": "pnpx codemod pnpm/catalog"
+    "catalog": "pnpx codemod pnpm/catalog",
+    "changeset": "changeset",
+    "commit": "czg"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "catalog:",
+    "@changesets/cli": "catalog:",
     "@shiyu/commitlint-config": "workspace:*",
     "@shiyu/eslint-config": "workspace:*",
     "@shiyu/node-utils": "workspace:*",

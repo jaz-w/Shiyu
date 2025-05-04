@@ -4,6 +4,10 @@ packages:
   - packages/*
   - apps/*
 catalog:
+  "@changesets/changelog-github": ^0.5.1
+  "@changesets/cli": ^2.29.2
+  "@commitlint/cli": ^19.8.0
+  "@commitlint/config-conventional": ^19.8.0
   "@manypkg/get-packages": ^2.2.2
   "@types/node": ^22.15.3
   "@vitejs/plugin-vue": ^5.2.3
@@ -12,9 +16,12 @@ catalog:
   autoprefixer: ^10.4.21
   cac: ^6.7.14
   chalk: ^5.4.1
+  commitlint-plugin-function-rules: ^4.0.1
   consola: ^3.4.2
   cross-env: ^7.0.3
   cspell: ^8.19.3
+  cz-git: ^1.11.1
+  czg: ^1.11.1
   dayjs: ^1.11.13
   execa: ^9.5.2
   find-up: ^7.0.0
