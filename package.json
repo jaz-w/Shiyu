@@ -19,6 +19,7 @@
     "changeset": "changeset",
     "commit": "czg"
   },
+  "type": "module",
   "devDependencies": {
     "@changesets/changelog-github": "catalog:",
     "@changesets/cli": "catalog:",

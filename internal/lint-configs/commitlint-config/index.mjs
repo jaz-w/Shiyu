@@ -12,6 +12,7 @@ const allowedScopes = [
   'ci',
   'dev',
   'deploy',
+  'mock',
   'other',
 ]
 
@@ -41,7 +42,7 @@ const userConfig = {
       s: 'style: update code format',
     },
     allowCustomIssuePrefixs: false,
-    // scopes: [...scopes, 'mock'],
+    scopes: [...allowedScopes],
     allowEmptyIssuePrefixs: false,
     customScopesAlign: scopeComplete ? 'bottom' : 'top',
     defaultScope: scopeComplete,
