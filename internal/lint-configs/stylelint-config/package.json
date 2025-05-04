@@ -10,5 +10,34 @@
     "directory": "internal/lint-configs/stylelint-config"
   },
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
+  "devDependencies": {
+    "postcss": "catalog:",
+    "postcss-html": "catalog:",
+    "postcss-scss": "catalog:",
+    "prettier": "catalog:",
+    "stylelint": "catalog:",
+    "stylelint-config-recommended": "catalog:",
+    "stylelint-config-recommended-scss": "catalog:",
+    "stylelint-config-recommended-vue": "catalog:",
+    "stylelint-config-standard": "catalog:",
+    "stylelint-order": "catalog:",
+    "stylelint-prettier": "catalog:"
+  },
+  "dependencies": {
+    "@stylistic/stylelint-plugin": "catalog:",
+    "stylelint-config-recess-order": "catalog:",
+    "stylelint-scss": "catalog:"
+  }
 }
