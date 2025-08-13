@@ -10,5 +10,25 @@
     "directory": "internal/unocss-config"
   },
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "stub": "pnpm unbuild --stub"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "devDependencies": {
+    "@unocss/preset-legacy-compat": "catalog:",
+    "@unocss/preset-rem-to-px": "catalog:",
+    "unocss": "catalog:"
+  }
 }
