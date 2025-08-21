@@ -15,9 +15,10 @@
   },
   "scripts": {
     "postinstall": "pnpm -r run stub --if-present",
-    "catalog": "pnpx codemod pnpm/catalog",
     "changeset": "changeset",
-    "commit": "czg"
+    "commit": "czg",
+    "version": "pnpm exec changeset version && pnpm install --no-frozen-lockfile",
+    "catalog": "npx codemod pnpm/catalog"
   },
   "type": "module",
   "devDependencies": {
@@ -49,5 +50,6 @@
     "vitest": "catalog:",
     "vue": "catalog:",
     "vue-tsc": "catalog:"
-  }
+  },
+  "packageManager": "pnpm@9.15.9"
 }
