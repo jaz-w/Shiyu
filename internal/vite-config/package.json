@@ -10,5 +10,29 @@
     "directory": "internal/vite-config"
   },
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "stub": "pnpm unbuild --stub"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "@vitejs/plugin-react-swc": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "vite-plugin-checker": "catalog:",
+    "vite-plugin-progress": "catalog:"
+  }
 }
