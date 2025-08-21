@@ -3,9 +3,10 @@ import type { Linter } from 'eslint'
 import { interopDefault } from '../util'
 
 export async function vue(): Promise<Linter.Config[]> {
-  const [pluginVue, parserVue, parserTs] = await Promise.all([
+  const [pluginVue, parserVue, pluginA11y, parserTs] = await Promise.all([
     interopDefault(import('eslint-plugin-vue')),
     interopDefault(import('vue-eslint-parser')),
+    interopDefault(import('eslint-plugin-vuejs-accessibility')),
     // @ts-expect-error missing types
     interopDefault(import('@typescript-eslint/parser')),
   ] as const)
@@ -33,10 +34,14 @@ export async function vue(): Promise<Linter.Config[]> {
       },
       plugins: {
         vue: pluginVue,
+        'vuejs-accessibility': pluginA11y,
       },
       processor: pluginVue.processors?.['.vue'],
       rules: {
         ...pluginVue.configs?.base?.rules,
+        ...pluginVue.configs?.recommended?.rules,
+        ...pluginVue.configs?.essential?.rules,
+        ...pluginA11y.configs?.recommended?.rules,
 
         'vue/attribute-hyphenation': [
           'error',

@@ -18,6 +18,7 @@ import {
   typescript,
   unicorn,
   vue,
+  react,
 } from './configs'
 import { customConfig } from './custom-config'
 
@@ -28,6 +29,7 @@ type FlatConfigPromise = FlatConfig | FlatConfig[] | Promise<FlatConfig> | Promi
 async function defineConfig(config: FlatConfig[] = []) {
   const configs: FlatConfigPromise[] = [
     vue(),
+    react(),
     javascript(),
     ignores(),
     prettier(),
