@@ -27,8 +27,8 @@
     }
   },
   "devDependencies": {
-    "@unocss/preset-legacy-compat": "catalog:",
-    "@unocss/preset-rem-to-px": "catalog:",
-    "unocss": "catalog:"
+    "@unocss/preset-legacy-compat": "^66.4.2",
+    "@unocss/preset-rem-to-px": "^66.4.2",
+    "unocss": "66.4.2"
   }
 }

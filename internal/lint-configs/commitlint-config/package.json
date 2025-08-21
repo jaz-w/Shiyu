@@ -23,11 +23,11 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "catalog:",
-    "@commitlint/config-conventional": "catalog:",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@shiyu/node-utils": "workspace:*",
-    "commitlint-plugin-function-rules": "catalog:",
-    "cz-git": "catalog:",
-    "czg": "catalog:"
+    "commitlint-plugin-function-rules": "^4.0.1",
+    "cz-git": "^1.11.1",
+    "czg": "^1.11.1"
   }
 }

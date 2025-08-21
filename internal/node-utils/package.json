@@ -28,16 +28,17 @@
     }
   },
   "devDependencies": {
-    "@manypkg/get-packages": "catalog:",
-    "cac": "catalog:",
-    "chalk": "catalog:",
-    "consola": "catalog:",
-    "dayjs": "catalog:",
-    "execa": "catalog:",
-    "find-up": "catalog:",
-    "nanospinner": "catalog:",
-    "pkg-types": "catalog:",
-    "prettier": "catalog:",
-    "rimraf": "catalog:"
+    "@manypkg/get-packages": "^2.2.2",
+    "cac": "^6.7.14",
+    "chalk": "^5.4.1",
+    "consola": "^3.4.2",
+    "dayjs": "^1.11.13",
+    "execa": "^9.5.2",
+    "find-up": "^7.0.0",
+    "js-yaml": "^4.1.0",
+    "nanospinner": "^1.2.2",
+    "pkg-types": "^2.1.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1"
   }
 }
