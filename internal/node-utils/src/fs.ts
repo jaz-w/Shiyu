@@ -1,11 +1,11 @@
-import { promises as fs } from 'node:fs'
+import { readFile, mkdir, writeFile } from 'node:fs/promises'
 import { dirname } from 'node:path'
 import { consola } from 'consola'
 
 // 从指定文件路径读取 JSON 格式的数据并解析为 JavaScript 对象
 export async function readJSON(filePath: string) {
   try {
-    const data = await fs.readFile(filePath, 'utf8')
+    const data = await readFile(filePath, 'utf8')
     return JSON.parse(data)
   } catch (error) {
     consola.error('reading JSON file:', error)
@@ -17,9 +17,9 @@ export async function readJSON(filePath: string) {
 export async function outputJSON(filePath: string, data: any, spaces: number = 2) {
   try {
     const dir = dirname(filePath)
-    await fs.mkdir(dir, { recursive: true })
+    await mkdir(dir, { recursive: true })
     const jsonData = JSON.stringify(data, null, spaces)
-    await fs.writeFile(filePath, jsonData, 'utf8')
+    await writeFile(filePath, jsonData, 'utf8')
   } catch (error) {
     consola.error('writing JSON file:', error)
     throw error
@@ -30,8 +30,8 @@ export async function outputJSON(filePath: string, data: any, spaces: number = 2
 export async function ensureFile(filePath: string) {
   try {
     const dir = dirname(filePath)
-    await fs.mkdir(dir, { recursive: true })
-    await fs.writeFile(filePath, '', { flag: 'a' })
+    await mkdir(dir, { recursive: true })
+    await writeFile(filePath, '', { flag: 'a' })
   } catch (error) {
     consola.error('ensuring file:', error)
     throw error
