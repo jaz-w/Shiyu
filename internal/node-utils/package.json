@@ -28,6 +28,7 @@
     }
   },
   "devDependencies": {
+    "@changesets/git": "^3.0.4",
     "@manypkg/get-packages": "^2.2.2",
     "cac": "^6.7.14",
     "chalk": "^5.4.1",
@@ -35,8 +36,7 @@
     "dayjs": "^1.11.13",
     "execa": "^9.5.2",
     "find-up": "^7.0.0",
-    "js-yaml": "^4.1.0",
-    "nanospinner": "^1.2.2",
+    "ora": "^8.2.0",
     "pkg-types": "^2.1.0",
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1"

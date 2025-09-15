@@ -2,7 +2,7 @@ import fs from 'node:fs/promises'
 
 import { format, getFileInfo, resolveConfig } from 'prettier'
 
-async function prettierFormat(filepath: string) {
+export async function prettierFormat(filepath: string) {
   const prettierOptions = await resolveConfig(filepath, {})
 
   const fileInfo = await getFileInfo(filepath)
@@ -17,5 +17,3 @@ async function prettierFormat(filepath: string) {
   }
   return output
 }
-
-export { prettierFormat }

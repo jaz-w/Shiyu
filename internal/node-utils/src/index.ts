@@ -1,18 +1,22 @@
 export { default as fs } from 'node:fs/promises'
 export { default as colors } from 'chalk'
 export { type Package } from '@manypkg/get-packages'
+export { type PackageJson, readPackageJSON } from 'pkg-types'
 export { consola } from 'consola'
 export { rimraf } from 'rimraf'
+export { add as gitAdd } from '@changesets/git'
 
+export * from 'cac'
+export * from 'execa'
+
+export { getStagedFiles } from './git'
 export { generatorContentHash } from './hash'
 export { toPosixPath } from './path'
 export { prettierFormat } from './prettier'
 
-export * from 'cac'
-export * from 'execa'
-export * from 'nanospinner'
-export * from 'pkg-types'
-
+export * from './constants'
 export * from './date'
 export * from './fs'
 export * from './monorepo'
+export * from './git'
+export * from './spinner'
