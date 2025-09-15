@@ -16,6 +16,8 @@
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 turbo build",
     "build:docker": "./scripts/deploy/build-local-docker-image.sh",
+    "dev": "turbo-run dev",
+    "preview": "turbo-run preview",
     "postinstall": "pnpm -r run stub --if-present",
     "changeset": "changeset",
     "clean": "node ./scripts/clean.mjs",
@@ -32,6 +34,7 @@
     "@shiyu/prettier-config": "workspace:*",
     "@shiyu/stylelint-config": "workspace:*",
     "@shiyu/tsconfig": "workspace:*",
+    "@shiyu/turbo-run": "workspace:*",
     "@shiyu/unocss-config": "workspace:*",
     "@shiyu/vite-config": "workspace:*",
     "@types/node": "^22.15.3",
