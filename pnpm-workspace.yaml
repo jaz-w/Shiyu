@@ -3,3 +3,4 @@ packages:
   - internal/lint-configs/*
   - packages/*
   - apps/*
+  - scripts/*
