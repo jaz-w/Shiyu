@@ -1,4 +1,4 @@
-import { promises as fs } from 'node:fs'
+import { rm, lstat } from 'node:fs/promises'
 import { join, normalize } from 'node:path'
 
 const rootDir = process.cwd()
@@ -9,16 +9,16 @@ const rootDir = process.cwd()
  * @param {string[]} targets - 要删除的目标列表
  */
 async function cleanTargetsRecursively(currentDir, targets) {
-  const items = await fs.readdir(currentDir)
+  const items = await readdir(currentDir)
 
   for (const item of items) {
     try {
       const itemPath = normalize(join(currentDir, item))
-      const stat = await fs.lstat(itemPath)
+      const stat = await lstat(itemPath)
 
       if (targets.includes(item)) {
         // 匹配到目标目录或文件时直接删除
-        await fs.rm(itemPath, { force: true, recursive: true })
+        await rm(itemPath, { force: true, recursive: true })
         console.log(`Deleted: ${itemPath}`)
       } else if (stat.isDirectory()) {
         // 只对目录进行递归处理
