@@ -18,8 +18,6 @@
     "antfu.iconify",
     // CSS 变量提示
     "vunguyentuan.vscode-css-variables",
-    // 在 package.json 中显示 PNPM catalog 的版本
-    "antfu.pnpm-catalog-lens",
     // 错误行高亮
     "usernamehw.errorlens"
   ],
