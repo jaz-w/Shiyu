@@ -14,6 +14,8 @@
     "pnpm": ">=9.15.0"
   },
   "scripts": {
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 turbo build",
+    "build:docker": "./scripts/deploy/build-local-docker-image.sh",
     "postinstall": "pnpm -r run stub --if-present",
     "changeset": "changeset",
     "clean": "node ./scripts/clean.mjs",
