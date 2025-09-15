@@ -44,6 +44,9 @@ importers:
       '@shiyu/vite-config':
         specifier: workspace:*
         version: link:internal/vite-config
+      '@shiyu/vsh':
+        specifier: workspace:*
+        version: link:scripts/vsh
       '@types/node':
         specifier: ^22.15.3
         version: 22.17.1
