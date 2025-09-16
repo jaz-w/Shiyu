@@ -1,4 +1,4 @@
-import { rm, lstat } from 'node:fs/promises'
+import { lstat, rm } from 'node:fs/promises'
 import { join, normalize } from 'node:path'
 
 const rootDir = process.cwd()

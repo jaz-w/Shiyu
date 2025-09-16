@@ -1,4 +1,4 @@
-import { execaCommand, getPackages } from '@shiyu/node-utils'
+import { execaCommand, getPackages } from '@jaz-w/shiyu-node-utils'
 
 import { cancel, isCancel, select } from '@clack/prompts'
 

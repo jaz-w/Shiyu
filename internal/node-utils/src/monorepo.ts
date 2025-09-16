@@ -1,9 +1,10 @@
 import { dirname } from 'node:path'
-import { findUpSync } from 'find-up'
+
 import {
   getPackages as getPackagesFunc,
   getPackagesSync as getPackagesSyncFunc,
 } from '@manypkg/get-packages'
+import { findUpSync } from 'find-up'
 
 /**
  * 查找大仓的根目录

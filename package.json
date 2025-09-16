@@ -1,18 +1,15 @@
 {
   "name": "shiyu-monorepo",
-  "description": "时屿",
   "version": "0.0.0",
+  "description": "时屿",
+  "bugs": "https://github.com/jaz-w/Shiyu/issues",
+  "repository": "https://github.com/jaz-w/Shiyu.git",
   "license": "MIT",
   "author": {
     "name": "JazWang",
     "url": "https://github.com/jaz-w"
   },
-  "bugs": "https://github.com/jaz-w/Shiyu/issues",
-  "repository": "https://github.com/jaz-w/Shiyu.git",
-  "engines": {
-    "node": ">=20.10.0",
-    "pnpm": ">=9.15.0"
-  },
+  "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 turbo build",
     "build:docker": "./scripts/deploy/build-local-docker-image.sh",
@@ -39,21 +36,20 @@
     "update:deps": "npx taze -r -w",
     "version": "pnpm exec changeset version && pnpm install --no-frozen-lockfile"
   },
-  "type": "module",
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.2",
+    "@jaz-w/shiyu-commitlint-config": "workspace:*",
+    "@jaz-w/shiyu-eslint-config": "workspace:*",
+    "@jaz-w/shiyu-node-utils": "workspace:*",
+    "@jaz-w/shiyu-prettier-config": "workspace:*",
+    "@jaz-w/shiyu-stylelint-config": "workspace:*",
+    "@jaz-w/shiyu-tsconfig": "workspace:*",
+    "@jaz-w/shiyu-turbo-run": "workspace:*",
+    "@jaz-w/shiyu-unocss-config": "workspace:*",
+    "@jaz-w/shiyu-vite-config": "workspace:*",
+    "@jaz-w/shiyu-vsh": "workspace:*",
     "@playwright/test": "^1.55.0",
-    "@shiyu/commitlint-config": "workspace:*",
-    "@shiyu/eslint-config": "workspace:*",
-    "@shiyu/node-utils": "workspace:*",
-    "@shiyu/prettier-config": "workspace:*",
-    "@shiyu/stylelint-config": "workspace:*",
-    "@shiyu/tsconfig": "workspace:*",
-    "@shiyu/turbo-run": "workspace:*",
-    "@shiyu/unocss-config": "workspace:*",
-    "@shiyu/vite-config": "workspace:*",
-    "@shiyu/vsh": "workspace:*",
     "@types/node": "^22.15.3",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vitejs/plugin-vue-jsx": "^5.0.1",
@@ -76,6 +72,10 @@
     "vitest": "^3.1.2",
     "vue": "^3.5.13",
     "vue-tsc": "^2.2.10"
+  },
+  "engines": {
+    "node": ">=20.10.0",
+    "pnpm": ">=9.15.0"
   },
   "packageManager": "pnpm@9.15.9"
 }

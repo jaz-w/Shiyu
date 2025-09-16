@@ -1,5 +1,6 @@
-import { readFile, writeFile, stat, readdir } from 'node:fs/promises'
+import { readdir, readFile, stat, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
+
 import { format, getFileInfo, resolveConfig } from 'prettier'
 
 /**

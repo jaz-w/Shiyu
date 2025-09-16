@@ -1,4 +1,4 @@
-import { colors, consola } from '@shiyu/node-utils'
+import { colors, consola } from '@jaz-w/shiyu-node-utils'
 
 import { cac } from 'cac'
 

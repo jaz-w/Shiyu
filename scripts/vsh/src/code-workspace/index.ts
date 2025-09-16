@@ -11,7 +11,7 @@ import {
   outputJSON,
   prettierFormat,
   toPosixPath,
-} from '@shiyu/node-utils'
+} from '@jaz-w/shiyu-node-utils'
 
 const CODE_WORKSPACE_FILE = join('shiyu.code-workspace')
 

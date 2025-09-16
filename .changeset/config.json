@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
   "changelog": ["@changesets/changelog-github", { "repo": "jaz-w/Shiyu" }],
   "commit": false,
-  "fixed": [["@shiyu/*"]],
+  "fixed": [["@jaz-w/shiyu-*"]],
   "linked": [],
   "access": "restricted",
   "baseBranch": "main",

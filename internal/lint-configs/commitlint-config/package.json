@@ -1,5 +1,5 @@
 {
-  "name": "@shiyu/commitlint-config",
+  "name": "@jaz-w/shiyu-commitlint-config",
   "version": "0.0.0",
   "private": true,
   "homepage": "https://github.com/jaz-w/Shiyu",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@shiyu/node-utils": "workspace:*",
+    "@jaz-w/shiyu-node-utils": "workspace:*",
     "commitlint-plugin-function-rules": "^4.0.1",
     "cz-git": "^1.11.1",
     "czg": "^1.11.1"

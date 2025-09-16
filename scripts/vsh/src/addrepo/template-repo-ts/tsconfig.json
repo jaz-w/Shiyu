@@ -1,5 +1,5 @@
 {
-  "extends": "@shiyu/tsconfig/node.json",
+  "extends": "@jaz-w/shiyu-tsconfig/node.json",
   "include": ["src"],
   "exclude": ["node_modules"]
 }

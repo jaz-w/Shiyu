@@ -1,5 +1,6 @@
-import { readFile, mkdir, writeFile, copyFile, readdir, readlink, symlink } from 'node:fs/promises'
+import { copyFile, mkdir, readdir, readFile, readlink, symlink, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
+
 import { consola } from 'consola'
 
 // 从指定文件路径读取 JSON 格式的数据并解析为 JavaScript 对象

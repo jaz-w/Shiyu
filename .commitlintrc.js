@@ -1,1 +1,1 @@
-export { default } from '@shiyu/commitlint-config'
+export { default } from '@jaz-w/shiyu-commitlint-config'

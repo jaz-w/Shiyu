@@ -1,5 +1,5 @@
 // @ts-check
 
-import { defineConfig } from '@shiyu/eslint-config'
+import { defineConfig } from '@jaz-w/shiyu-eslint-config'
 
 export default defineConfig()

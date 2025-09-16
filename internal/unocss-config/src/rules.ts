@@ -1,4 +1,4 @@
-import { type Rule } from 'unocss'
+import type { Rule } from 'unocss'
 
 export default [
   [/^wh-(\d+)px$/, ([, d]) => ({ width: `${d}px`, height: `${d}px` })],

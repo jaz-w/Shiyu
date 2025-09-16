@@ -1,4 +1,4 @@
 export default {
-  extends: ['@shiyu/stylelint-config'],
+  extends: ['@jaz-w/shiyu-stylelint-config'],
   root: true,
 }

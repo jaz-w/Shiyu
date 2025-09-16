@@ -1,24 +1,31 @@
 import type { CAC } from 'cac'
 
-import { getPackages } from '@shiyu/node-utils'
+import { getPackages } from '@jaz-w/shiyu-node-utils'
 
 import depcheck from 'depcheck'
 
 // 默认配置
 const DEFAULT_CONFIG = {
   // 需要忽略的依赖匹配
-  ignoreMatches: ['@types/*', '@shiyu/tsconfig', '@shiyu/vite-config', 'unbuild', 'vite', 'vitest'],
+  ignoreMatches: [
+    '@types/*',
+    '@jaz-w/shiyu-tsconfig',
+    '@jaz-w/shiyu-vite-config',
+    'unbuild',
+    'vite',
+    'vitest',
+  ],
   // 需要忽略的包
   ignorePackages: [
-    '@shiyu/commitlint-config',
-    '@shiyu/eslint-config',
-    '@shiyu/node-utils',
-    '@shiyu/prettier-config',
-    '@shiyu/stylelint-config',
-    '@shiyu/unocss-config',
-    '@shiyu/tsconfig',
-    '@shiyu/vite-config',
-    '@shiyu/vsh',
+    '@jaz-w/shiyu-commitlint-config',
+    '@jaz-w/shiyu-eslint-config',
+    '@jaz-w/shiyu-node-utils',
+    '@jaz-w/shiyu-prettier-config',
+    '@jaz-w/shiyu-stylelint-config',
+    '@jaz-w/shiyu-unocss-config',
+    '@jaz-w/shiyu-tsconfig',
+    '@jaz-w/shiyu-vite-config',
+    '@jaz-w/shiyu-vsh',
   ],
   // 需要忽略的文件模式
   ignorePatterns: ['dist', 'node_modules', 'public'],

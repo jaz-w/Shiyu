@@ -1,4 +1,4 @@
-import { type UserShortcuts } from 'unocss'
+import type { UserShortcuts } from 'unocss'
 
 export default {
   'wh-full': 'w-full h-full',

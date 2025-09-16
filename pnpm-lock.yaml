@@ -14,39 +14,39 @@ importers:
       '@changesets/cli':
         specifier: ^2.29.2
         version: 2.29.5
+      '@jaz-w/shiyu-commitlint-config':
+        specifier: workspace:*
+        version: link:internal/lint-configs/commitlint-config
+      '@jaz-w/shiyu-eslint-config':
+        specifier: workspace:*
+        version: link:internal/lint-configs/eslint-config
+      '@jaz-w/shiyu-node-utils':
+        specifier: workspace:*
+        version: link:internal/node-utils
+      '@jaz-w/shiyu-prettier-config':
+        specifier: workspace:*
+        version: link:internal/lint-configs/prettier-config
+      '@jaz-w/shiyu-stylelint-config':
+        specifier: workspace:*
+        version: link:internal/lint-configs/stylelint-config
+      '@jaz-w/shiyu-tsconfig':
+        specifier: workspace:*
+        version: link:internal/tsconfig
+      '@jaz-w/shiyu-turbo-run':
+        specifier: workspace:*
+        version: link:scripts/turbo-run
+      '@jaz-w/shiyu-unocss-config':
+        specifier: workspace:*
+        version: link:internal/unocss-config
+      '@jaz-w/shiyu-vite-config':
+        specifier: workspace:*
+        version: link:internal/vite-config
+      '@jaz-w/shiyu-vsh':
+        specifier: workspace:*
+        version: link:scripts/vsh
       '@playwright/test':
         specifier: ^1.55.0
         version: 1.55.0
-      '@shiyu/commitlint-config':
-        specifier: workspace:*
-        version: link:internal/lint-configs/commitlint-config
-      '@shiyu/eslint-config':
-        specifier: workspace:*
-        version: link:internal/lint-configs/eslint-config
-      '@shiyu/node-utils':
-        specifier: workspace:*
-        version: link:internal/node-utils
-      '@shiyu/prettier-config':
-        specifier: workspace:*
-        version: link:internal/lint-configs/prettier-config
-      '@shiyu/stylelint-config':
-        specifier: workspace:*
-        version: link:internal/lint-configs/stylelint-config
-      '@shiyu/tsconfig':
-        specifier: workspace:*
-        version: link:internal/tsconfig
-      '@shiyu/turbo-run':
-        specifier: workspace:*
-        version: link:scripts/turbo-run
-      '@shiyu/unocss-config':
-        specifier: workspace:*
-        version: link:internal/unocss-config
-      '@shiyu/vite-config':
-        specifier: workspace:*
-        version: link:internal/vite-config
-      '@shiyu/vsh':
-        specifier: workspace:*
-        version: link:scripts/vsh
       '@types/node':
         specifier: ^22.15.3
         version: 22.17.1
@@ -122,7 +122,7 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.8.0
         version: 19.8.1
-      '@shiyu/node-utils':
+      '@jaz-w/shiyu-node-utils':
         specifier: workspace:*
         version: link:../../node-utils
       commitlint-plugin-function-rules:
@@ -138,13 +138,13 @@ importers:
   internal/lint-configs/eslint-config:
     dependencies:
       eslint-config-turbo:
-        specifier: ^2.5.2
-        version: 2.5.5(eslint@9.33.0(jiti@2.5.1))(turbo@2.5.5)
+        specifier: ^2.5.6
+        version: 2.5.6(eslint@9.33.0(jiti@2.5.1))(turbo@2.5.5)
       eslint-plugin-command:
-        specifier: ^3.2.0
+        specifier: ^3.3.1
         version: 3.3.1(eslint@9.33.0(jiti@2.5.1))
       eslint-plugin-import-x:
-        specifier: ^4.11.0
+        specifier: ^4.16.1
         version: 4.16.1(@typescript-eslint/utils@8.39.1(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.33.0(jiti@2.5.1))
     devDependencies:
       '@eslint/js':
@@ -364,7 +364,7 @@ importers:
       '@clack/prompts':
         specifier: 0.11.0
         version: 0.11.0
-      '@shiyu/node-utils':
+      '@jaz-w/shiyu-node-utils':
         specifier: workspace:*
         version: link:../../internal/node-utils
       cac:
@@ -376,7 +376,7 @@ importers:
       '@clack/prompts':
         specifier: 0.11.0
         version: 0.11.0
-      '@shiyu/node-utils':
+      '@jaz-w/shiyu-node-utils':
         specifier: workspace:*
         version: link:../../internal/node-utils
       cac:
@@ -3267,8 +3267,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-turbo@2.5.5:
-    resolution: {integrity: sha512-23lKrCr66HQR62aa94n2dBGUUFz0GzM6N1KwmcREZHxomZ5Ik2rDm00wAz95lOEkhzSt6IaxW00Uz0az/Fcq5Q==}
+  eslint-config-turbo@2.5.6:
+    resolution: {integrity: sha512-1EV/UqdKE75st9q6y0MCxz7qp2v7RyGvbQsMLSuCz+VH8ScnSfmhd8FcAbqx3BshCy5IluujzMB6T5iCgL3/sA==}
     peerDependencies:
       eslint: '>6.6.0'
       turbo: '>2.0.0'
@@ -3389,8 +3389,8 @@ packages:
     peerDependencies:
       eslint: '>=8.44.0'
 
-  eslint-plugin-turbo@2.5.5:
-    resolution: {integrity: sha512-IlN65X6W7rgK88u5xl1xC+7FIGKA7eyaca0yxZQ9CBNV6keAaqtjZQLw8ZfXdv7T+MzTLYkYOeOHAv8yCRUx4Q==}
+  eslint-plugin-turbo@2.5.6:
+    resolution: {integrity: sha512-KUDE23aP2JV8zbfZ4TeM1HpAXzMM/AYG/bJam7P4AalUxas8Pd/lS/6R3p4uX91qJcH1LwL4h0ED48nDe8KorQ==}
     peerDependencies:
       eslint: '>6.6.0'
       turbo: '>2.0.0'
@@ -9470,10 +9470,10 @@ snapshots:
       eslint: 9.33.0(jiti@2.5.1)
       semver: 7.7.2
 
-  eslint-config-turbo@2.5.5(eslint@9.33.0(jiti@2.5.1))(turbo@2.5.5):
+  eslint-config-turbo@2.5.6(eslint@9.33.0(jiti@2.5.1))(turbo@2.5.5):
     dependencies:
       eslint: 9.33.0(jiti@2.5.1)
-      eslint-plugin-turbo: 2.5.5(eslint@9.33.0(jiti@2.5.1))(turbo@2.5.5)
+      eslint-plugin-turbo: 2.5.6(eslint@9.33.0(jiti@2.5.1))(turbo@2.5.5)
       turbo: 2.5.5
 
   eslint-import-context@0.1.9(unrs-resolver@1.11.1):
@@ -9646,7 +9646,7 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-turbo@2.5.5(eslint@9.33.0(jiti@2.5.1))(turbo@2.5.5):
+  eslint-plugin-turbo@2.5.6(eslint@9.33.0(jiti@2.5.1))(turbo@2.5.5):
     dependencies:
       dotenv: 16.0.3
       eslint: 9.33.0(jiti@2.5.1)

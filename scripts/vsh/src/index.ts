@@ -1,14 +1,14 @@
-import { colors, consola } from '@shiyu/node-utils'
+import { colors, consola } from '@jaz-w/shiyu-node-utils'
 
 import { cac } from 'cac'
 
 import { version } from '../package.json'
+import { defineAddrepoCommand } from './addrepo'
 import { defineCheckCircularCommand } from './check-circular'
 import { defineDepcheckCommand } from './check-dep'
 import { defineCodeWorkspaceCommand } from './code-workspace'
 import { defineLintCommand } from './lint'
 import { definePubLintCommand } from './publint'
-import { defineAddrepoCommand } from './addrepo'
 
 // 命令描述
 const COMMAND_DESCRIPTIONS = {

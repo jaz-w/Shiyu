@@ -1,6 +1,6 @@
 import { execSync } from 'node:child_process'
 
-import { getPackagesSync } from '@shiyu/node-utils'
+import { getPackagesSync } from '@jaz-w/shiyu-node-utils'
 
 const { packages } = getPackagesSync()
 

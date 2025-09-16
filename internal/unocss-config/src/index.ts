@@ -11,8 +11,8 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
-import shortcuts from './shortcuts'
 import rules from './rules'
+import shortcuts from './shortcuts'
 
 export default defineConfig({
   presets: [

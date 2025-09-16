@@ -2,7 +2,8 @@ import type { CAC } from 'cac'
 
 import { extname } from 'node:path'
 
-import { getStagedFiles } from '@shiyu/node-utils'
+import { getStagedFiles } from '@jaz-w/shiyu-node-utils'
+
 import { circularDepsDetect } from 'circular-dependency-scanner'
 
 // 默认配置

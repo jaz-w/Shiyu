@@ -1,19 +1,19 @@
 import type { CAC } from 'cac'
 
-import { join, relative, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { readdir, stat } from 'node:fs/promises'
-
-import { select, text, isCancel, cancel } from '@clack/prompts'
+import { dirname, join, relative } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import {
+  cloneDir,
+  colors,
+  consola,
   findMonorepoRoot,
   prettierFormat,
-  consola,
   toPosixPath,
-  colors,
-  cloneDir,
-} from '@shiyu/node-utils'
+} from '@jaz-w/shiyu-node-utils'
+
+import { cancel, isCancel, select, text } from '@clack/prompts'
 
 const repoRoot = findMonorepoRoot()
 
@@ -33,7 +33,7 @@ export function defineAddrepoCommand(cli: CAC) {
     })
     .option('--list', 'List available templates')
     .action(
-      async (name?: string, options?: { template?: string; dir?: string; list?: boolean }) => {
+      async (name?: string, options?: { dir?: string; list?: boolean; template?: string }) => {
         const templates = (await readdir(templatesRoot, { withFileTypes: true }))
           .filter(e => e.isDirectory() && e.name.startsWith('template-'))
           .map(e => e.name)
@@ -53,7 +53,7 @@ export function defineAddrepoCommand(cli: CAC) {
 
             templates.forEach((t, i) => {
               const color = colorFns[i % colorFns.length] || ((s: string) => s)
-              console.log('  ' + color(t))
+              console.log(`  ${color(t)}`)
             })
 
             process.exit(0)
@@ -104,7 +104,7 @@ export function defineAddrepoCommand(cli: CAC) {
               consola.error('Target already exists:', targetDir)
               process.exit(1)
             }
-          } catch (error) {
+          } catch {
             // not exists, ok
           }
 

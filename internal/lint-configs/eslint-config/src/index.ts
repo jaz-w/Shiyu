@@ -12,13 +12,13 @@ import {
   node,
   perfectionist,
   prettier,
+  react,
   regexp,
   test,
   turbo,
   typescript,
   unicorn,
   vue,
-  react,
 } from './configs'
 import { customConfig } from './custom-config'
 

@@ -68,7 +68,13 @@
     "vnode",
     "vueuse",
     "Yaocang",
-    "Yelan"
+    "Yelan",
+    "ACMR",
+    "Attributify",
+    "Tagify",
+    "Windi",
+    "Addrepo",
+    "addrepo"
   ],
   "ignorePaths": [
     "**/node_modules/**",

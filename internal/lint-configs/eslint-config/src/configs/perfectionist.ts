@@ -3,10 +3,7 @@ import type { Linter } from 'eslint'
 import { interopDefault } from '../util'
 
 export async function perfectionist(): Promise<Linter.Config[]> {
-  const perfectionistPlugin = await interopDefault(
-    // @ts-expect-error - no types
-    import('eslint-plugin-perfectionist')
-  )
+  const perfectionistPlugin = await interopDefault(import('eslint-plugin-perfectionist'))
 
   return [
     perfectionistPlugin.configs['recommended-natural'],
@@ -24,28 +21,28 @@ export async function perfectionist(): Promise<Linter.Config[]> {
           {
             customGroups: {
               type: {
-                'shiyu-core-type': ['^@shiyu-core/.+'],
-                'shiyu-type': ['^@shiyu/.+'],
+                'shiyu-type': ['^@jaz-w/shiyu-.+'],
                 'vue-type': ['^vue$', '^vue-.+', '^@vue/.+'],
+                'react-type': ['^react$', '^react-.+', '^@react/.+'],
               },
               value: {
-                shiyu: ['^@shiyu/.+'],
-                'shiyu-core': ['^@shiyu-core/.+'],
+                shiyu: ['^@jaz-w/shiyu-.+'],
                 vue: ['^vue$', '^vue-.+', '^@vue/.+'],
+                react: ['^react$', '^react-.+', '^@react/.+'],
               },
             },
             environment: 'node',
             groups: [
               ['external-type', 'builtin-type', 'type'],
               'vue-type',
+              'react-type',
               'shiyu-type',
-              'shiyu-core-type',
               ['parent-type', 'sibling-type', 'index-type'],
               ['internal-type'],
               'builtin',
               'vue',
+              'react',
               'shiyu',
-              'shiyu-core',
               'external',
               'internal',
               ['parent', 'sibling', 'index'],

@@ -30,6 +30,8 @@ export async function unicorn(): Promise<Linter.Config[]> {
         'unicorn/prefer-global-this': 'off',
         'unicorn/prefer-top-level-await': 'off',
         'unicorn/prevent-abbreviations': 'off',
+        'unicorn/no-anonymous-default-export': 'off',
+        'unicorn/no-await-expression-member': 'off',
       },
     },
     {

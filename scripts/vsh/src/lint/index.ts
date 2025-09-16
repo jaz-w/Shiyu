@@ -1,6 +1,6 @@
 import type { CAC } from 'cac'
 
-import { execaCommand } from '@shiyu/node-utils'
+import { execaCommand } from '@jaz-w/shiyu-node-utils'
 
 interface LintCommandOptions {
   /**
@@ -13,7 +13,7 @@ async function runLint({ format }: LintCommandOptions) {
   // process.env.FORCE_COLOR = '3';
 
   if (format) {
-    await execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache --fix`, {
+    await execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache --fix --allow-empty-input`, {
       stdio: 'inherit',
     })
     await execaCommand(`eslint . --cache --fix`, {
@@ -31,7 +31,7 @@ async function runLint({ format }: LintCommandOptions) {
     execaCommand(`prettier . --ignore-unknown --check --cache`, {
       stdio: 'inherit',
     }),
-    execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache`, {
+    execaCommand(`stylelint "**/*.{vue,css,less,scss}" --cache --allow-empty-input`, {
       stdio: 'inherit',
     }),
   ])

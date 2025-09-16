@@ -13,7 +13,7 @@ import {
   outputJSON,
   readJSON,
   UNICODE,
-} from '@shiyu/node-utils'
+} from '@jaz-w/shiyu-node-utils'
 
 import { publint } from 'publint'
 import { formatMessage } from 'publint/utils'

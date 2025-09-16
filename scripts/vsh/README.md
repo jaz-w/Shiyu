@@ -1,4 +1,4 @@
-# @shiyu/vsh
+# @jaz-w/shiyu-vsh
 
 一个 Shell 脚本工具集合，用于 Shiyu 项目的开发和管理。
 
@@ -14,13 +14,13 @@
 
 ```bash
 # 使用 pnpm 安装
-pnpm add -D @shiyu/vsh
+pnpm add -D @jaz-w/shiyu-vsh
 
 # 或者使用 npm
-npm install -D @shiyu/vsh
+npm install -D @jaz-w/shiyu-vsh
 
 # 或者使用 yarn
-yarn add -D @shiyu/vsh
+yarn add -D @jaz-w/shiyu-vsh
 ```
 
 ## 使用方法
@@ -29,7 +29,7 @@ yarn add -D @shiyu/vsh
 
 ```bash
 # 全局安装
-pnpm add -g @shiyu/vsh
+pnpm add -g @jaz-w/shiyu-vsh
 
 # 使用 vsh 命令
 vsh [command]
