@@ -1,5 +1,5 @@
-import { readFile, mkdir, writeFile } from 'node:fs/promises'
-import { dirname } from 'node:path'
+import { readFile, mkdir, writeFile, copyFile, readdir, readlink, symlink } from 'node:fs/promises'
+import { dirname, join } from 'node:path'
 import { consola } from 'consola'
 
 // 从指定文件路径读取 JSON 格式的数据并解析为 JavaScript 对象
@@ -35,5 +35,31 @@ export async function ensureFile(filePath: string) {
   } catch (error) {
     consola.error('ensuring file:', error)
     throw error
+  }
+}
+
+// 深度拷贝文件目录
+export async function cloneDir(src: string, dest: string) {
+  // 确保目标文件夹存在
+  await mkdir(dest, { recursive: true })
+
+  // 读取源目录内容
+  const entries = await readdir(src, { withFileTypes: true })
+
+  for (const entry of entries) {
+    const srcPath = join(src, entry.name)
+    const destPath = join(dest, entry.name)
+
+    if (entry.isDirectory()) {
+      // 递归复制子目录
+      await cloneDir(srcPath, destPath)
+    } else if (entry.isFile()) {
+      // 复制文件
+      await copyFile(srcPath, destPath)
+    } else if (entry.isSymbolicLink()) {
+      // 处理符号链接
+      const link = await readlink(srcPath)
+      await symlink(link, destPath)
+    }
   }
 }
