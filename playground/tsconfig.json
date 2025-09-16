@@ -1,0 +1,5 @@
+{
+  "extends": "@jaz-w/shiyu-tsconfig/base.json",
+  "include": [".storybook"],
+  "exclude": ["node_modules"]
+}

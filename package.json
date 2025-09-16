@@ -14,6 +14,7 @@
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 turbo build",
     "build:docker": "./scripts/deploy/build-local-docker-image.sh",
     "build:analyze": "turbo build:analyze",
+    "build:playground": "pnpm --filter @jaz-w/shiyu-playground build",
     "changeset": "pnpm exec changeset",
     "check": "pnpm run check:circular && pnpm run check:dep && pnpm run check:type && pnpm check:cspell",
     "check:circular": "vsh check-circular",
@@ -23,6 +24,7 @@
     "clean": "node ./scripts/clean.mjs",
     "commit": "czg",
     "dev": "turbo-run dev",
+    "dev:playground": "pnpm --filter @jaz-w/shiyu-playground dev",
     "format": "vsh lint --format",
     "lint": "vsh lint",
     "addrepo": "vsh addrepo",
@@ -49,6 +51,7 @@
     "@jaz-w/shiyu-unocss-config": "workspace:*",
     "@jaz-w/shiyu-vite-config": "workspace:*",
     "@jaz-w/shiyu-vsh": "workspace:*",
+    "@jaz-w/shiyu-playground": "workspace:*",
     "@playwright/test": "^1.55.0",
     "@types/node": "^22.15.3",
     "@vitejs/plugin-vue": "^6.0.1",
@@ -74,7 +77,7 @@
     "vue-tsc": "^2.2.10"
   },
   "engines": {
-    "node": ">=20.10.0",
+    "node": ">=22",
     "pnpm": ">=9.15.0"
   },
   "packageManager": "pnpm@9.15.9"

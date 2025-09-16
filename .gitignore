@@ -48,3 +48,6 @@ vite.config.ts.*
 *.sln
 *.sw?
 .history
+
+*storybook.log
+storybook-static
