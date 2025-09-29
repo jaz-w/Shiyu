@@ -1,10 +1,8 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import pluginJsdoc from 'eslint-plugin-jsdoc'
 
-export async function jsdoc(): Promise<Linter.Config[]> {
-  const [pluginJsdoc] = await Promise.all([interopDefault(import('eslint-plugin-jsdoc'))] as const)
-
+export function jsdoc(): Linter.Config[] {
   return [
     {
       plugins: {

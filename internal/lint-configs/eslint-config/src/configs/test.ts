@@ -1,14 +1,10 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+// @ts-expect-error missing types
+import pluginNoOnlyTests from 'eslint-plugin-no-only-tests'
+import pluginTest from 'eslint-plugin-vitest'
 
-export async function test(): Promise<Linter.Config[]> {
-  const [pluginTest, pluginNoOnlyTests] = await Promise.all([
-    interopDefault(import('eslint-plugin-vitest')),
-    // @ts-expect-error - no types
-    interopDefault(import('eslint-plugin-no-only-tests')),
-  ] as const)
-
+export function test(): Linter.Config[] {
   return [
     {
       files: [
@@ -21,6 +17,7 @@ export async function test(): Promise<Linter.Config[]> {
       plugins: {
         test: {
           ...pluginTest,
+
           rules: {
             ...pluginTest.rules,
             ...pluginNoOnlyTests.rules,

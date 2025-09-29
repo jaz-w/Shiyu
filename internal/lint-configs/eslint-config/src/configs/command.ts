@@ -1,5 +1,7 @@
+import type { Linter } from 'eslint'
+
 import createCommand from 'eslint-plugin-command/config'
 
-export async function command() {
-  return [{ ...createCommand() }]
+export function command(): Linter.Config[] {
+  return [createCommand()]
 }

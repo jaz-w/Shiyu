@@ -1,10 +1,8 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import perfectionistPlugin from 'eslint-plugin-perfectionist'
 
-export async function perfectionist(): Promise<Linter.Config[]> {
-  const perfectionistPlugin = await interopDefault(import('eslint-plugin-perfectionist'))
-
+export function perfectionist(): Linter.Config[] {
   return [
     perfectionistPlugin.configs['recommended-natural'],
     {

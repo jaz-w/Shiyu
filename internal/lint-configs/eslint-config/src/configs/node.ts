@@ -1,10 +1,8 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import pluginNode from 'eslint-plugin-n'
 
-export async function node(): Promise<Linter.Config[]> {
-  const pluginNode = await interopDefault(import('eslint-plugin-n'))
-
+export function node(): Linter.Config[] {
   return [
     {
       plugins: {
@@ -18,11 +16,13 @@ export async function node(): Promise<Linter.Config[]> {
           'error',
           {
             allowModules: [
+              'vue',
+              'react',
               'unbuild',
-              '@jaz-w/shiyu-vite-config',
               'vitest',
               'vite',
               '@vue/test-utils',
+              '@jaz-w/shiyu-vite-config',
               '@jaz-w/shiyu-unocss-config',
               '@playwright/test',
             ],

@@ -1,21 +1,18 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import pluginJsonc from 'eslint-plugin-jsonc'
+import parserJsonc from 'jsonc-eslint-parser'
 
-export async function jsonc(): Promise<Linter.Config[]> {
-  const [pluginJsonc, parserJsonc] = await Promise.all([
-    interopDefault(import('eslint-plugin-jsonc')),
-    interopDefault(import('jsonc-eslint-parser')),
-  ] as const)
-
+export function jsonc(): Linter.Config[] {
   return [
     {
       files: ['**/*.json', '**/*.json5', '**/*.jsonc', '*.code-workspace'],
       languageOptions: {
-        parser: parserJsonc as any,
+        parser: parserJsonc,
       },
       plugins: {
-        jsonc: pluginJsonc as any,
+        // @ts-expect-error missing types
+        jsonc: pluginJsonc,
       },
       rules: {
         'jsonc/no-bigint-literals': 'error',

@@ -1,14 +1,14 @@
-import type { Linter } from 'eslint'
+import { Linter } from 'eslint'
+import { importX } from 'eslint-plugin-import-x'
 
-import * as pluginImport from 'eslint-plugin-import-x'
-
-export async function importPluginConfig(): Promise<Linter.Config[]> {
+export function importPluginConfig(): Linter.Config[] {
   return [
     {
       plugins: {
-        // @ts-expect-error - This is a dynamic import
-        import: pluginImport,
+        // @ts-expect-error missing types
+        'import-x': importX,
       },
+      extends: ['import-x/flat/recommended'],
       rules: {
         'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
         'import/first': 'error',

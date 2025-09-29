@@ -1,13 +1,9 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import pluginTs from '@typescript-eslint/eslint-plugin'
+import parserTs from '@typescript-eslint/parser'
 
-export async function typescript(): Promise<Linter.Config[]> {
-  const [pluginTs, parserTs] = await Promise.all([
-    interopDefault(import('@typescript-eslint/eslint-plugin')),
-    interopDefault(import('@typescript-eslint/parser')),
-  ] as const)
-
+export function typescript(): Linter.Config[] {
   return [
     {
       files: ['**/*.?([cm])[jt]s?(x)'],
@@ -26,11 +22,12 @@ export async function typescript(): Promise<Linter.Config[]> {
         },
       },
       plugins: {
+        // @ts-expect-error missing types
         '@typescript-eslint': pluginTs,
       },
       rules: {
-        ...pluginTs.configs['eslint-recommended'].overrides?.[0].rules,
-        ...pluginTs.configs.strict.rules,
+        ...pluginTs.configs['eslint-recommended']?.overrides?.[0]?.rules,
+        ...pluginTs.configs.strict?.rules,
         '@typescript-eslint/ban-ts-comment': [
           'error',
           {

@@ -1,10 +1,8 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import * as pluginTurbo from 'eslint-config-turbo'
 
-export async function turbo(): Promise<Linter.Config[]> {
-  const [pluginTurbo] = await Promise.all([interopDefault(import('eslint-config-turbo'))] as const)
-
+export function turbo(): Linter.Config[] {
   return [
     {
       plugins: {

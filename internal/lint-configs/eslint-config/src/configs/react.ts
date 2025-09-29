@@ -1,16 +1,11 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import parserTs from '@typescript-eslint/parser'
+import pluginA11y from 'eslint-plugin-jsx-a11y'
+import pluginReact from 'eslint-plugin-react'
+import pluginReactHooks from 'eslint-plugin-react-hooks'
 
-export async function react(): Promise<Linter.Config[]> {
-  const [pluginReact, pluginReactHooks, pluginA11y, parserTs] = await Promise.all([
-    interopDefault(import('eslint-plugin-react')),
-    interopDefault(import('eslint-plugin-react-hooks')),
-    interopDefault(import('eslint-plugin-jsx-a11y')),
-    // @ts-expect-error missing types
-    interopDefault(import('@typescript-eslint/parser')),
-  ] as const)
-
+export function react(): Linter.Config[] {
   return [
     {
       files: ['**/*.{jsx,tsx}'],

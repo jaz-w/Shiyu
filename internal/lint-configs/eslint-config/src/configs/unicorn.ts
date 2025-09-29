@@ -1,12 +1,8 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import pluginUnicorn from 'eslint-plugin-unicorn'
 
-export async function unicorn(): Promise<Linter.Config[]> {
-  const [pluginUnicorn] = await Promise.all([
-    interopDefault(import('eslint-plugin-unicorn')),
-  ] as const)
-
+export function unicorn(): Linter.Config[] {
   return [
     {
       plugins: {

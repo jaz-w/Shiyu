@@ -4,7 +4,7 @@ import js from '@eslint/js'
 import pluginUnusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 
-export async function javascript(): Promise<Linter.Config[]> {
+export function javascript(): Linter.Config[] {
   return [
     {
       languageOptions: {

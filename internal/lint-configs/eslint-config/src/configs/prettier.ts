@@ -1,11 +1,8 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import pluginPrettier from 'eslint-plugin-prettier'
 
-export async function prettier(): Promise<Linter.Config[]> {
-  const [pluginPrettier] = await Promise.all([
-    interopDefault(import('eslint-plugin-prettier')),
-  ] as const)
+export function prettier(): Linter.Config[] {
   return [
     {
       plugins: {

@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 
-export async function disableds(): Promise<Linter.Config[]> {
+export function disableds(): Linter.Config[] {
   return [
     {
       files: ['**/__tests__/**/*.?([cm])[jt]s?(x)'],

@@ -1,24 +1,16 @@
 import type { Linter } from 'eslint'
 
-import { interopDefault } from '../util'
+import parserVue from 'vue-eslint-parser'
 
-export async function vue(): Promise<Linter.Config[]> {
-  const [pluginVue, parserVue, pluginA11y, parserTs] = await Promise.all([
-    interopDefault(import('eslint-plugin-vue')),
-    interopDefault(import('vue-eslint-parser')),
-    interopDefault(import('eslint-plugin-vuejs-accessibility')),
-    // @ts-expect-error missing types
-    interopDefault(import('@typescript-eslint/parser')),
-  ] as const)
+import parserTs from '@typescript-eslint/parser'
+import pluginVue from 'eslint-plugin-vue'
+import pluginA11y from 'eslint-plugin-vuejs-accessibility'
 
-  const flatEssential = pluginVue.configs?.['flat/essential'] || []
-  const flatStronglyRecommended = pluginVue.configs?.['flat/strongly-recommended'] || []
-  const flatRecommended = pluginVue.configs?.['flat/recommended'] || []
-
+export function vue(): Linter.Config[] {
   return [
-    ...flatEssential,
-    ...flatStronglyRecommended,
-    ...flatRecommended,
+    ...pluginVue.configs['flat/essential'],
+    ...pluginVue.configs['flat/strongly-recommended'],
+    ...pluginVue.configs['flat/recommended'],
     {
       files: ['**/*.vue'],
       languageOptions: {
@@ -38,10 +30,10 @@ export async function vue(): Promise<Linter.Config[]> {
       },
       processor: pluginVue.processors?.['.vue'],
       rules: {
-        ...pluginVue.configs?.base?.rules,
-        ...pluginVue.configs?.recommended?.rules,
-        ...pluginVue.configs?.essential?.rules,
-        ...pluginA11y.configs?.recommended?.rules,
+        ...pluginVue.configs.base.rules,
+        ...pluginVue.configs.recommended.rules,
+        ...pluginVue.configs.essential.rules,
+        ...pluginA11y.configs.recommended.rules,
 
         'vue/attribute-hyphenation': [
           'error',
