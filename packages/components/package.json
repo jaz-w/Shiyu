@@ -1,0 +1,20 @@
+{
+  "name": "@jaz-w/shiyu-components",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/jaz-w/Shiyu",
+  "bugs": "https://github.com/jaz-w/Shiyu/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaz-w/Shiyu.git",
+    "directory": "packages/components"
+  },
+  "license": "MIT",
+  "type": "module",
+  "scripts": {},
+  "files": [],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "unpkg": "dist/index.js"
+}
