@@ -23,7 +23,7 @@ import { customConfig } from './custom-config'
 
 type FlatConfig = Linter.Config | Linter.Config[]
 
-async function defineConfig(config: Linter.Config[] = []) {
+function defineConfig(config: Linter.Config[] = []) {
   const configs: FlatConfig[] = [
     vue(),
     react(),
