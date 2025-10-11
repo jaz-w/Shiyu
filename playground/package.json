@@ -11,10 +11,7 @@
   },
   "license": "MIT",
   "type": "module",
-  "scripts": {
-    "dev": "storybook dev -p 6006",
-    "build": "storybook build"
-  },
+  "scripts": {},
   "files": [
     "dist"
   ],
@@ -28,10 +25,5 @@
       "default": "./dist/index.mjs"
     }
   },
-  "devDependencies": {
-    "@storybook/addon-docs": "9.1.6",
-    "@storybook/react-vite": "9.1.6",
-    "eslint-plugin-storybook": "9.1.6",
-    "storybook": "9.1.6"
-  }
+  "devDependencies": {}
 }
