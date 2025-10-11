@@ -2,6 +2,6 @@ packages:
   - internal/*
   - internal/lint-configs/*
   - packages/*
-  - apps/*
+  - apps/**
   - scripts/*
   - playground
