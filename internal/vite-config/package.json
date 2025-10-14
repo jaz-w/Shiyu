@@ -27,12 +27,26 @@
     }
   },
   "devDependencies": {
+    "@unocss/preset-legacy-compat": "^66.5.3",
+    "@unocss/preset-rem-to-px": "^66.5.3",
+    "@unocss/transformer-compile-class": "^66.5.3",
     "@vitejs/plugin-legacy": "^7.2.1",
-    "@vitejs/plugin-react": "^5.0.1",
-    "@vitejs/plugin-react-swc": "^4.0.1",
-    "@vitejs/plugin-vue": "^6.0.1",
-    "@vitejs/plugin-vue-jsx": "^5.0.1",
-    "vite-plugin-checker": "^0.10.2",
-    "vite-plugin-progress": "^0.0.7"
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitejs/plugin-react-swc": "^4.1.0",
+    "@vitejs/plugin-vue": "catalog:frontend",
+    "@vitejs/plugin-vue-jsx": "catalog:frontend",
+    "@vue/runtime-core": "catalog:frontend",
+    "autoprefixer": "catalog:frontend",
+    "postcss": "catalog:frontend",
+    "rollup-plugin-visualizer": "^6.0.4",
+    "sass": "catalog:frontend",
+    "unocss": "^66.5.3",
+    "unplugin-auto-import": "^20.2.0",
+    "unplugin-icons": "^22.4.2",
+    "unplugin-vue-components": "^29.1.0",
+    "unplugin-vue-markdown": "^29.2.0",
+    "vite-plugin-checker": "^0.11.0",
+    "vite-plugin-progress": "^0.0.7",
+    "vue-tsc": "catalog:frontend"
   }
 }
