@@ -217,9 +217,6 @@ importers:
       '@iconify/vue':
         specifier: ^4.0.0
         version: 4.3.0(vue@3.5.18(typescript@5.9.2))
-      '@jaz-w/shiyu-eslint-config':
-        specifier: workspace:^
-        version: link:../../../internal/lint-configs/eslint-config
       '@jaz-w/shiyu-vite-config':
         specifier: workspace:^
         version: link:../../../internal/vite-config
