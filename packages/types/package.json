@@ -1,0 +1,20 @@
+{
+  "name": "@jaz-w/shiyu-types",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/jaz-w/Shiyu",
+  "bugs": "https://github.com/jaz-w/Shiyu/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaz-w/Shiyu.git",
+    "directory": "packages/types"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./global": "./global/global.d.ts",
+    "./env": "./global/env.d.ts",
+    "./vite-env": "./global/vite-env.d.ts"
+  }
+}
