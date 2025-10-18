@@ -1,0 +1,8 @@
+{
+  "extends": "@jaz-w/shiyu-tsconfig/node.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "types": ["@jaz-w/shiyu-types/global", "@jaz-w/shiyu-types/env"]
+  },
+  "exclude": ["node_modules"]
+}

@@ -27,9 +27,12 @@
     }
   },
   "devDependencies": {
+    "@types/lodash-es": "catalog:",
+    "@types/qs": "catalog:",
     "@unocss/preset-legacy-compat": "^66.5.3",
     "@unocss/preset-rem-to-px": "^66.5.3",
     "@unocss/transformer-compile-class": "^66.5.3",
+    "@vitejs/plugin-basic-ssl": "catalog:frontend",
     "@vitejs/plugin-legacy": "^7.2.1",
     "@vitejs/plugin-react": "^5.0.4",
     "@vitejs/plugin-react-swc": "^4.1.0",
@@ -37,7 +40,9 @@
     "@vitejs/plugin-vue-jsx": "catalog:frontend",
     "@vue/runtime-core": "catalog:frontend",
     "autoprefixer": "catalog:frontend",
+    "lodash-es": "catalog:",
     "postcss": "catalog:frontend",
+    "qs": "catalog:",
     "rollup-plugin-visualizer": "^6.0.4",
     "sass": "catalog:frontend",
     "unocss": "^66.5.3",
