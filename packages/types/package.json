@@ -15,6 +15,6 @@
     ".": "./src/index.ts",
     "./global": "./global/global.d.ts",
     "./env": "./global/env.d.ts",
-    "./vite-env": "./global/vite-env.d.ts"
+    "./shims-vue": "./global/shims-vue.d.ts"
   }
 }
