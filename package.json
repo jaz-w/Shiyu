@@ -49,7 +49,9 @@
     "@jaz-w/shiyu-stylelint-config": "workspace:*",
     "@jaz-w/shiyu-tsconfig": "workspace:*",
     "@jaz-w/shiyu-turbo-run": "workspace:*",
+    "@jaz-w/shiyu-types": "workspace:*",
     "@jaz-w/shiyu-unocss-config": "workspace:*",
+    "@jaz-w/shiyu-utils": "workspace:*",
     "@jaz-w/shiyu-vite-config": "workspace:*",
     "@jaz-w/shiyu-vsh": "workspace:*",
     "@types/node": "catalog:",
@@ -66,7 +68,7 @@
     "vitest": "catalog:"
   },
   "engines": {
-    "node": ">=22",
+    "node": ">=22.20.0",
     "pnpm": ">=9.15.0"
   },
   "packageManager": "pnpm@9.15.9"
