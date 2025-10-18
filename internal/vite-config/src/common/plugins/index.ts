@@ -44,9 +44,26 @@ export function createCommonPluginOptions(
 
     Icons(options?.icon ?? { autoInstall: true }),
 
-    AutoImport(merge({}, options?.autoImport)),
+    AutoImport(
+      merge(
+        {
+          dts: 'src/types/auto-imports.d.ts',
+          eslintrc: {
+            enabled: true,
+            filepath: '.eslintrc-auto-import.json',
+            globalsPropValue: true,
+          },
+        },
+        options?.autoImport
+      )
+    ),
 
-    viteCustomResolveGlobalType(options?.resolveGlobalType),
+    viteCustomResolveGlobalType(
+      merge(
+        { filepath: [], eslintrcFilepath: '.eslintrc-auto-import.json' },
+        options?.resolveGlobalType
+      )
+    ),
 
     process.env.NODE_ENV_SSL && SSL(options?.ssl),
 
