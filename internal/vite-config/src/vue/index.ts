@@ -4,9 +4,9 @@ import { createCommonViteConfig, type CommonConfigOptions } from '../common'
 import { createVuePluginOptions, type VuePluginOptions } from './plugins'
 import { merge } from 'lodash-es'
 
-export type VueConfigOptions = {
+export type VueConfigOptions = Partial<{
   plugins: CommonConfigOptions['plugins'] & VuePluginOptions
-}
+}>
 
 export default async (configOptions?: VueConfigOptions) => {
   return defineConfig(async configEnv => {
