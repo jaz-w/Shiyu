@@ -15,9 +15,6 @@
     "lint:style": "stylelint --fix **/*.{vue,html,css}",
     "commit": "git-cz"
   },
-  "engines": {
-    "node": ">=14.16.0"
-  },
   "dependencies": {
     "@vueuse/core": "catalog:frontend",
     "axios": "catalog:",
@@ -27,6 +24,7 @@
     "normalize.css": "catalog:frontend",
     "pinia": "catalog:frontend",
     "pinyin": "catalog:",
+    "vue": "catalog:frontend",
     "vue-router": "catalog:frontend"
   },
   "devDependencies": {
@@ -38,7 +36,6 @@
     "@iconify-json/line-md": "^1.2.11",
     "@iconify-json/logos": "^1.2.9",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify/vue": "^4.0.0",
-    "@jaz-w/shiyu-vite-config": "workspace:^"
+    "@iconify/vue": "^4.0.0"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "@jaz-w/shiyu-tsconfig/web-app.json",
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "compilerOptions": {
+    "types": ["@jaz-w/shiyu-types/global", "@jaz-w/shiyu-types/env", "@jaz-w/shiyu-types/shims-vue"]
+  }
+}
